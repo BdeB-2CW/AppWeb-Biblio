@@ -13,11 +13,11 @@ const connection = mysql.createConnection({
 // open the MySQL connection
 connection.connect(error => {
  if (error) throw error;
- connection.query("SELECT * FROM customers ", function (err, result){
+ connection.query("SELECT * FROM utilisateurs ", function (err, result){
  if (err) throw err;
  console.log(result);
  });
- console.log("Successfully connected to the database.");
+ console.log("Vous êtes connecté à la base de données.");
 });
 //le module.exports est l'objet retourné lorsqu'on utilise require
 module.exports = connection;
