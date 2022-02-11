@@ -1,0 +1,49 @@
+1.  
+    ID: 
+    Titre: L'Alchimiste
+    Auteur: Paolo Coelho
+    DateParution:2018
+    NombreDeCopies:5
+    ISBN: PCAL001
+    Cout: 19.99
+    Description:Le récit de la quête de Santiago et qui appprend à lire les signes du destin et à aller au bout de son rêve.
+
+   insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'L'Alchimiste', 'Paolo Coelho', 2018, 5, 'PCAL001', 19.99, 'Le récit de la quête de Santiago et qui appprend à lire les signes du destin et à aller au bout de son rêve.'); 
+
+2.  
+    ID: 
+    Titre: Brida
+    Auteur: Paolo Coelho
+    DateParution:2015
+    NombreDeCopies:5
+    ISBN: PCBR002
+    Cout: 17.99
+    Description: Brida est une jeune Irlandaise aux pouvoirs surnaturels qui se lance dans une quête effrénée de sagesse et de magie
+	
+  insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Brida', 'Paolo Coelho', 2015, 5, 'PCBR002', 17.99, 'Brida est une jeune Irlandaise aux pouvoirs surnaturels qui se lance dans une quête effrénée de sagesse et de magie.'); 
+ 
+3.  
+    ID: 
+    Titre: La voie de l'archer
+    Auteur: Paolo Coelho
+    DateParution: 2016
+    NombreDeCopies: 5
+    ISBN: PCLV003
+    Cout: 21.99
+    Description: Un jeune archer à l'agilité prodigieuse se rend auprès du maître Tetsuya pour le défier. Ce dernier confie à un jeune garçon les principes fondamentaux de la voie de l'archer.
+
+ insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'La voie de l'archer', 'Paolo Coelho', 2016, 5, 'PCLV003', 21.99, 'Un jeune archer à l'agilité prodigieuse se rend auprès du maître Tetsuya pour le défier. Ce dernier confie à un jeune garçon les principes fondamentaux de la voie de l'archer.'); 
+
+4.  
+    ID:
+    Titre: Le Zahir
+    Auteur: Paolo Coelho
+    DateParution: 2016
+    NombreDeCopies: 5
+    ISBN: PCLZ004
+    Cout: 25.99
+    Description: Un écrivain célèbre raconte la disparition de sa femme, Esther, correspondante de guerre.
+
+    insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le Zahir', 'Paolo Coelho', 2016, 5, 'PCLZ004', 25.99, 'Un écrivain célèbre raconte la disparition de sa femme, Esther, correspondante de guerre.'); 
+    
+    

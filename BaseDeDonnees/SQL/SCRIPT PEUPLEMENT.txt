@@ -1,0 +1,39 @@
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'La peste', 'Albert Camus', 2007, 5, 'ACLP002', 11.99, ' L\'intrigue du roman présente l\'histoire d\'une épidémie de peste qui sévit sur la ville d\'Oran dans les années 1940. Des rats viennent mourir au grand jour ; ils portent le bacille de la peste.'); 
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'La chute', 'Albert Camus', 1998, 5, 'ACLC003', 8.99, ' Sur le pont, je passai derrière une forme penchée sur le parapet, et qui semblait regarder le fleuve. De plus près, je distinguai une mince jeune femme, habillée de noir.');
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Les justes', 'Albert Camus', 2002, 5, 'ACLJ004', 9.99, ' Ne pleurez pas. Non, non, ne pleurez pas ! Vous voyez bien que c\'est le jour de la justification. Quelque chose s\'élève à cette heure qui est notre témoignage à nous autres révoltés : Yanek n\'est plus un meurtrier.');
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'L\'étranger', 'Albert Camus', 2001, 5, 'ACLE001', 12.99, ' Récit intérieur de Meursault, employé de bureau anonyme pour les autres et pour lui-même, qui tue finalement de cinq balles un Algérien sur la plage de Tipaza à Alger.'); 
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le chien', 'Eric-Emmanuel Schmitt', 2001, 5, 'ESLC001', 5.99, ' Samuel Heymann, un médecin du Hainaut, se suicide quelques jours après la mort de son chien.'); 
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Les deux messieurs de Bruxelles', 'Eric-Emmanuel Schmitt', 2015, 5, 'ACLE001', 12.99, ' Cinq nouvelles sur le mystère des sentiments inavoués.');
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Monsieur Ibrahim et les fleurs du coran', 'Eric-Emmanuel Schmitt', 2016, 5, 'ESMF003', 15.99, ' Paris dans les années 60. Moïse, dit Momo, est un garçon de 12 ans qui s\'ennuie. Quand son père, un avocat juif neurasthénique, se suicide, il est adopté par Monsieur Ibrahim, épicier arabe, musulman, plus exactement soufi.');
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Oscar et la dame rose', 'Eric-Emmanuel Schmitt', 2008, 5, 'ESOD004', 17.99, ' Sur le conseil de Mamie Rose, une visiteuse, le jeune Oscar, âgé de 10 ans et condamné par un cancer, écrit à Dieu depuis son lit d\'hôpital afin de lui confier le récit de sa vie.');
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'La métamorphose', 'Franz Kafka', 1985, 5, 'FKLM001', 7.99, ' Un homme, transformé en coléoptère monstrueux, se trouve confronté à sa famille dont l\'ambition est de l\'éliminer.'); 
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Les dessins', 'Franz Kafka', 1986, 5, 'FKLD002', 13.99, ' Entre 1901 et 1907, Kafka dessine intensément, saisissant sur le vif des êtres fragiles et instables.'); 
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le procès', 'Franz Kafka', 1988, 5, ' FKLP003', 16.99, ' On raconte que c\'est grâce aux éditions clandestines du samizdat - et donc, sans nom d\'auteur - que fut introduite en Union soviétique la traduction du Procès. '); 
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le château', 'Franz Kafka', 1982, 5, ' FKLC004', 18.99, ' Le récit suit les aventures de K., qui se bat pour entrer en contact avec les autorités du village où il vient d\'arriver, afin d\'officialiser son statut d\'arpenteur.'); 
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Demian', 'Herman Hesse', 1989, 5, 'HHDE001', 15.99, ' Demian est le roman d\'une adolescence, roman d\'initiation, de formation, et l\'un des chefs-d\'oeuvre du genre'); 
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'L\'ornière', 'Herman Hesse', 1995, 5, 'HHDE001', 5.99, 'L\'histoire d\'un adolescent aux dons et à l\'intelligence exceptionnels mais que le protestantisme et des méthodes d\'enseignement impitoyables et orgueilleuses vont broyer sans remords.');
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le loup des steppes', 'Herman Hesse', 1997, 5, 'HHLS003', 17.99, 'Expérience spirituelle, récit initiatique, délire de psychopathe, Le Loup des steppes multiplie les registres.'); 
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Berthold', 'Herman Hesse', 2000, 5, 'HHBE004', 13.99, ' Six nouvelles écrites entre 1908 et 1922 qui décrivent l\'itinéraire de cinq hommes - un séminariste. '); 
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'L\'Alchimiste', 'Paolo Coelho', 2018, 5, 'PCAL001', 19.99, 'Le récit de la quête de Santiago et qui appprend à lire les signes du destin et à aller au bout de son rêve.'); 
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Brida', 'Paolo Coelho', 2015, 5, 'PCBR002', 17.99, 'Brida est une jeune Irlandaise aux pouvoirs surnaturels qui se lance dans une quête effrénée de sagesse et de magie.');
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'La voie de l\'archer', 'Paolo Coelho', 2016, 5, 'PCLV003', 21.99, 'Un jeune archer à l\'agilité prodigieuse se rend auprès du maître Tetsuya pour le défier. Ce dernier confie à un jeune garçon les principes fondamentaux de la voie de l\'archer.');
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le Zahir', 'Paolo Coelho', 2016, 5, 'PCLZ004', 25.99, 'Un écrivain célèbre raconte la disparition de sa femme, Esther, correspondante de guerre.'); 
+
+
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Michelle', 'Horton', '514-299-4742','MichelleHorton@gmail.com', ''); 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Maria', 'Duke', '416-243-8749','MariaDuke@gmail.com', ''); 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'David', 'Day', '416-931-9935','DavidDay@gmail.com', ''); 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Augustine', 'Chambers', '905-480-3579','AugustineChambers@gmail.com', ''); 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Michael', 'Alexander', '780-999-9518','MichaelAlexander@gmail.com', ''); 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Charles ', 'Thomas', '604-452-5679','CharlesThomas@gmail.com', ''); 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Wajd', 'Horton', '514-299-4742','MichelleHorton@gmail.com', ''); 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Raniya', 'Samaha', '604-928-7185','RaniyaSamaha@gmail.com', ''); 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Abdul', 'Naifeh', '705-698-2151','AbdulNaifeh@gmail.com', ''); 
+
+
+

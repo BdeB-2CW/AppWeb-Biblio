@@ -1,0 +1,47 @@
+1.  
+    ID: 
+    Titre: La métamorphose
+    Auteur: Franz Kafka
+    DateParution: 1985
+    NombreDeCopies: 5
+    ISBN: FKLM001
+    Cout: 7.99
+    Description: Un homme, transformé en coléoptère monstrueux, se trouve confronté à sa famille dont l'ambition est de l'éliminer.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'La métamorphose', 'Franz Kafka', 1985, 5, 'FKLM001', 7.99, ' Un homme, transformé en coléoptère monstrueux, se trouve confronté à sa famille dont l'ambition est de l'éliminer.'); 
+
+2.  
+    ID: 
+    Titre: Les dessins
+    Auteur: Franz Kafka
+    DateParution: 1986
+    NombreDeCopies:5
+    ISBN: FKLD002
+    Cout: 13.99
+    Description: Entre 1901 et 1907, Kafka dessine intensément, saisissant sur le vif des êtres fragiles et instables.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Les dessins', 'Franz Kafka', 1986, 5, 'FKLD002', 13.99, ' Entre 1901 et 1907, Kafka dessine intensément, saisissant sur le vif des êtres fragiles et instables.'); 
+
+3.  
+    ID: 
+    Titre: Le procès
+    Auteur: Franz Kafka
+    DateParution: 1988
+    NombreDeCopies:5
+    ISBN: FKLP003
+    Cout: 16.99
+    Description: On raconte que c'est grâce aux éditions clandestines du samizdat - et donc, sans nom d'auteur - que fut introduite en Union soviétique la traduction du Procès
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le procès', 'Franz Kafka', 1988, 5, ' FKLP003', 16.99, ' On raconte que c'est grâce aux éditions clandestines du samizdat - et donc, sans nom d'auteur - que fut introduite en Union soviétique la traduction du Procès. '); 
+
+4.  
+    ID: 
+    Titre: Le château
+    Auteur: Franz Kafka
+    DateParution: 1982
+    NombreDeCopies:5
+    ISBN: FKLC004
+    Cout: 18.99
+    Description: Le récit suit les aventures de K., qui se bat pour entrer en contact avec les autorités du village où il vient d'arriver, afin d'officialiser son statut d'arpenteur.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le château', 'Franz Kafka', 1982, 5, ' FKLC004', 18.99, ' Le récit suit les aventures de K., qui se bat pour entrer en contact avec les autorités du village où il vient d'arriver, afin d'officialiser son statut d'arpenteur.'); 

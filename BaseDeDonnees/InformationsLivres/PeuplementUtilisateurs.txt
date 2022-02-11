@@ -1,0 +1,88 @@
+ID:
+Nom: Michelle
+Prenom: Horton
+Telephone: 514-299-4742
+Email: MichelleHorton@gmail.com
+Photo: 
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Michelle', 'Horton', 5142994742,'MichelleHorton@gmail.com', ''); 
+
+ID:
+Nom: Maria
+Prenom: Duke
+Telephone: 416-243-8749
+Email: MariaDuke@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Maria', 'Duke', 4162438749,'MariaDuke@gmail.com', ''); 
+
+ID:
+Nom: David
+Prenom: Day
+Telephone: 416-931-9935
+Email: DavidDay@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'David', 'Day', 4169319935,'DavidDay@gmail.com', ''); 
+
+ID:
+Nom: Augustine
+Prenom: Chambers
+Telephone: 905-480-3579
+Email: AugustineChambers@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Augustine', 'Chambers', 9054803579,'AugustineChambers@gmail.com', ''); 
+
+ID:
+Nom: Charles 
+Prenom: Thomas
+Telephone: 604-452-5679
+Email: CharlesThomas@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Charles ', 'Thomas', 6044525679,'CharlesThomas@gmail.com', ''); 
+
+ID:
+Nom: Michael 
+Prenom: Alexander
+Telephone: 780-999-9518
+Email: MichaelAlexander@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Michael', 'Alexander', 7809999518,'MichaelAlexander@gmail.com', ''); 
+
+ID:
+Nom: Raniya
+Prenom: Samaha
+Telephone: 604-928-7185
+Email: RaniyaSamaha@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Raniya', 'Samaha', 6049287185,'RaniyaSamaha@gmail.com', ''); ¸
+
+ID:
+Nom: Wajd
+Prenom: Najjar
+Telephone: 250-979-0099
+Email: WajdNajjar@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Wajd', 'Horton', 5142994742,'MichelleHorton@gmail.com', ''); 
+
+ID:
+Nom: Ata
+Prenom: Maloof
+Telephone: 416-842-9955
+Email: AtaMaloof@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Ata', 'Maloof', 4168429955,'MichelleHorton@gmail.com', ''); 
+
+ID:
+Nom: Abdul
+Prenom: Naifeh
+Telephone: 705-698-2151
+Email: AbdulNaifeh@gmail.com
+Photo: 
+
+insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Photo) VALUES (ID, 'Abdul', 'Naifeh', 7056982151,'AbdulNaifeh@gmail.com', ''); 

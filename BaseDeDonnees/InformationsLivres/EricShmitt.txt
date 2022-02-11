@@ -1,0 +1,48 @@
+1.  
+    ID: 
+    Titre: Le chien 
+    Auteur: Eric-Emmanuel Shmitt
+    DateParution:2019
+    NombreDeCopies:5
+    ISBN: ESLC001
+    Cout: 5.99
+    Description: Samuel Heymann, un médecin du Hainaut, se suicide quelques jours après la mort de son chien.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le chien', 'Eric-Emmanuel Schmitt', 2001, 5, 'ESLC001', 5.99, ' Samuel Heymann, un médecin du Hainaut, se suicide quelques jours après la mort de son chien.'); 
+
+2.  
+    ID: 
+    Titre: Les deux messieurs de Bruxelles
+    Auteur: Eric-Emmanuel Shmitt
+    DateParution:2015
+    NombreDeCopies:5
+    ISBN: ESDB002
+    Cout: 10.99
+    Description: Cinq nouvelles sur le mystère des sentiments inavoués.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Les deux messieurs de Bruxelles', 'Eric-Emmanuel Schmitt', 2015, 5, 'ACLE001', 12.99, ' Cinq nouvelles sur le mystère des sentiments inavoués.');
+
+
+3.  
+    ID: 
+    Titre: Monsieur Ibrahim et les fleurs du coran
+    Auteur: Eric-Emmanuel Shmitt 
+    DateParution:2016
+    NombreDeCopies:5
+    ISBN: ESMF003
+    Cout: 15.99
+    Description: Paris dans les années 60. Moïse, dit Momo, est un garçon de 12 ans qui s'ennuie. Quand son père, un avocat juif neurasthénique, se suicide, il est adopté par Monsieur Ibrahim, épicier arabe, musulman, plus exactement soufi.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Monsieur Ibrahim et les fleurs du coran', 'Eric-Emmanuel Schmitt', 2016, 5, 'ESMF003', 15.99, ' Paris dans les années 60. Moïse, dit Momo, est un garçon de 12 ans qui s'ennuie. Quand son père, un avocat juif neurasthénique, se suicide, il est adopté par Monsieur Ibrahim, épicier arabe, musulman, plus exactement soufi.');
+
+4.  
+    ID: 
+    Titre: Oscar et la dame rose
+    Auteur: Eric-Emmanuel Shmitt
+    DateParution:2008
+    NombreDeCopies:5
+    ISBN: ESOD004
+    Cout: 17.99
+    Description: Sur le conseil de Mamie Rose, une visiteuse, le jeune Oscar, âgé de 10 ans et condamné par un cancer, écrit à Dieu depuis son lit d'hôpital afin de lui confier le récit de sa vie.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Oscar et la dame rose', 'Eric-Emmanuel Schmitt', 2008, 5, 'ESOD004', 17.99, ' Sur le conseil de Mamie Rose, une visiteuse, le jeune Oscar, âgé de 10 ans et condamné par un cancer, écrit à Dieu depuis son lit d'hôpital afin de lui confier le récit de sa vie.');

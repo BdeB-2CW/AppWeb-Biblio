@@ -1,0 +1,46 @@
+1.  
+    ID: 
+    Titre: L'étranger 
+    Auteur: Albert Camus
+    DateParution:2001
+    NombreDeCopies:5
+    ISBN: ACLE001
+    Cout: 12.99
+    Description: Récit intérieur de Meursault, employé de bureau anonyme pour les autres et pour lui-même, qui tue finalement de cinq balles un Algérien sur la plage de Tipaza à Alger.
+
+    insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'L'étranger', 'Albert Camus', 2001, 5, 'ACLE001', 12.99, ' Récit intérieur de Meursault, employé de bureau anonyme pour les autres et pour lui-même, qui tue finalement de cinq balles un Algérien sur la plage de Tipaza à Alger.'); 
+2.  
+    ID: 
+    Titre: La peste
+    Auteur: Albert Camus
+    DateParution:2007
+    NombreDeCopies:5
+    ISBN: ACLP002
+    Cout: 11.99
+    Description: L'intrigue du roman présente l'histoire d'une épidémie de peste qui sévit sur la ville d'Oran dans les années 1940. Des rats viennent mourir au grand jour ; ils portent le bacille de la peste.
+
+    insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'La peste', 'Albert Camus', 2007, 5, 'ACLP002', 11.99, ' L'intrigue du roman présente l'histoire d'une épidémie de peste qui sévit sur la ville d'Oran dans les années 1940. Des rats viennent mourir au grand jour ; ils portent le bacille de la peste.'); 
+
+3.  
+    ID: 
+    Titre: La chute
+    Auteur: Albert Camus 
+    DateParution:1998
+    NombreDeCopies:5
+    ISBN: ACLC003
+    Cout: 8.99
+    Description: Sur le pont, je passai derrière une forme penchée sur le parapet, et qui semblait regarder le fleuve. De plus près, je distinguai une mince jeune femme, habillée de noir.
+
+    insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'La chute', 'Albert Camus', 1998, 5, 'ACLC003', 8.99, ' Sur le pont, je passai derrière une forme penchée sur le parapet, et qui semblait regarder le fleuve. De plus près, je distinguai une mince jeune femme, habillée de noir.');
+
+4.  
+    ID: 
+    Titre: Les justes
+    Auteur: Albert Camus 
+    DateParution:2002
+    NombreDeCopies:5
+    ISBN: ACLJ004
+    Cout: 9.99
+    Description: Ne pleurez pas. Non, non, ne pleurez pas ! Vous voyez bien que c'est le jour de la justification. Quelque chose s'élève à cette heure qui est notre témoignage à nous autres révoltés : Yanek n'est plus un meurtrier
+
+    insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Les justes', 'Albert Camus', 2002, 5, 'ACLJ004', 9.99, ' Ne pleurez pas. Non, non, ne pleurez pas ! Vous voyez bien que c'est le jour de la justification. Quelque chose s'élève à cette heure qui est notre témoignage à nous autres révoltés : Yanek n'est plus un meurtrier.');

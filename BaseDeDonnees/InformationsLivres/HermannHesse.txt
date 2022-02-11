@@ -1,0 +1,47 @@
+1.  
+    ID: 
+    Titre: Demian
+    Auteur: Herman Hesse 
+    DateParution:1989
+    NombreDeCopies:5
+    ISBN: HHDE001
+    Cout: 15.99
+    Description: Demian est le roman d'une adolescence, roman d'initiation, de formation, et l'un des chefs-d'oeuvre du genre
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Demian', 'Herman Hesse', 1989, 5, 'HHDE001', 15.99, ' Demian est le roman d'une adolescence, roman d'initiation, de formation, et l'un des chefs-d'oeuvre du genre'); 
+
+2.  
+    ID: 
+    Titre: L'ornière
+    Auteur: Herman Hesse
+    DateParution:1995
+    NombreDeCopies:5
+    ISBN: HHLO002
+    Cout: 5.99
+    Description: L'histoire d'un adolescent aux dons et à l'intelligence exceptionnels mais que le protestantisme et des méthodes d'enseignement impitoyables et orgueilleuses vont broyer sans remords.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'L'ornière', 'Herman Hesse', 1995, 5, 'HHDE001', 5.99, ' L'histoire d'un adolescent aux dons et à l'intelligence exceptionnels mais que le protestantisme et des méthodes d'enseignement impitoyables et orgueilleuses vont broyer sans remords.'); 
+
+3.  
+    ID: 
+    Titre: Le loup des steppes
+    Auteur: Herman Hesse
+    DateParution:1997
+    NombreDeCopies:5
+    ISBN: HHLS003
+    Cout: 17.99
+    Description: Expérience spirituelle, récit initiatique, délire de psychopathe, Le Loup des steppes multiplie les registres.
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Le loup des steppes', 'Herman Hesse', 1997, 5, 'HHLS003', 17.99, 'Expérience spirituelle, récit initiatique, délire de psychopathe, Le Loup des steppes multiplie les registres.'); 
+
+4.  
+    ID: 
+    Titre: Berthold
+    Auteur: Herman Hesse
+    DateParution:2000
+    NombreDeCopies:5
+    ISBN: HHBE004
+    Cout: 13.99
+    Description: Six nouvelles écrites entre 1908 et 1922 qui décrivent l'itinéraire de cinq hommes - un séminariste. 
+
+insert into Livres (ID, Titre, Auteur, DateParution,  NombreDeCopies, ISBN, Cout, Description) VALUES (ID, 'Berthold', 'Herman Hesse', 2000, 5, 'HHBE004', 13.99, ' Six nouvelles écrites entre 1908 et 1922 qui décrivent l'itinéraire de cinq hommes - un séminariste. '); 

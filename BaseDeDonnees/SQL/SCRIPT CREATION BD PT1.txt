@@ -1,0 +1,22 @@
+CREATE TABLE livres (
+    id               INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    auteur	     VARCHAR(50) NOT NULL,
+    titre            VARCHAR(50) NOT NULL,
+    dateparution     INT NOT NULL,
+    nombredecopies   INT NOT NULL,
+    isbn             VARCHAR(15) NOT NULL,
+    cout             INT NOT NULL,
+    description      VARCHAR(250) NOT NULL,
+    utilisateurs_id  INT
+);
+
+
+
+CREATE TABLE utilisateurs (
+    id         INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
+    nom        VARCHAR(25) NOT NULL,
+    prenom     VARCHAR(25) NOT NULL,
+    telephone  VARCHAR(20) NOT NULL,
+    email      VARCHAR(50) NOT NULL,
+    photo      VARCHAR(150)
+);
