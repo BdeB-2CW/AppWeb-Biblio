@@ -3,21 +3,64 @@
     <head>
         Accueil       
     </head>
+<style>
+     .Titre{
+        text-align: center;
+        font-size: 30px;
+        
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 
-    <body>
-        <!-- Ceci est le texte affiché au client à l'accueil-->
-        <div class="Titre">
-            <h1 style="text-align: center;">Bienvenue sur BiblioClick !</h1>
-        </div>
-  
-        <div class="slider">
-            <div class="slides">
-                <slide><img src="../Images/livreImage1.jpg" alt=""></slide>
-                <slide><img src="../Images/livreImage2.jpg" alt=""></slide>
-                <slide><img src="../Images/livreImage3.jpg" alt=""></slide>
-               
-            </div>
-        </div>
+    .slider{
+        width: 1110px;
+        overflow: hidden;
+        margin: 150px auto;
 
-    </body>
+    }
+    .slides{
+        width: calc(1110px *3);
+        animation: glisse 15s infinite;
+    }
+    .slide {
+        float:left;
+    }
+
+    @keyframes glisse{
+        0%{
+            transform: translateX(0);
+        }
+        10%{
+            transform: translateX(0);
+        }
+        33%{
+            transform: translateX(-1110px);
+        }
+        43%{
+            transform: translateX(-1110px);
+        }
+        66%{
+            transform: translate(-2220px);
+        }
+        76%{
+            transform: translateX(-1110px);
+        }
+        100%{
+            transform: translate(0);
+        }
+    }
+</style>
+<body>
+    <div class="Titre">
+    <h1>Bienvenue sur BiblioClick !</h1>
+</div>
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="../Images/livreImage1.jpg" alt="image1"></div>
+        <div class="slide"><img src="../Images/livreImage2.jpg" alt="image2"></div>
+        <div class="slide"><img src="../Images/livreImage3.jpg" alt="image3"></div>
+
+    </div>
+</div>  
+</body>
 </html>
