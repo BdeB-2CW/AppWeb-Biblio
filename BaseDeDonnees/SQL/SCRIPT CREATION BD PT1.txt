@@ -3,7 +3,6 @@ CREATE TABLE livres (
     auteur	     VARCHAR(50) NOT NULL,
     titre            VARCHAR(50) NOT NULL,
     dateparution     INT NOT NULL,
-    nombredecopies   INT NOT NULL,
     isbn             VARCHAR(15) NOT NULL,
     cout             INT NOT NULL,
     description      VARCHAR(250) NOT NULL,
@@ -19,4 +18,5 @@ CREATE TABLE utilisateurs (
     telephone  VARCHAR(20) NOT NULL,
     email      VARCHAR(50) NOT NULL,
     photo      VARCHAR(150)
+    
 );

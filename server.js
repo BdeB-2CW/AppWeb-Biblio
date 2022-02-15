@@ -4,8 +4,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-app.use(express.static('public'))
+
+app.use( express.static( "public" ) );
 app.use('/CSS', express.static(__dirname + 'CSS'))
+app.use('./public/images', express.static(__dirname + 'images'))
 
 app.set('view engine', 'ejs');
 
