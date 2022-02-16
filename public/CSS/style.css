@@ -1,0 +1,82 @@
+  li {
+    list-style:none !important;
+    padding:10px;
+    font-size:20px;
+    text-decoration:none;
+    }
+    li.logoP{
+        padding-right:0%;
+        }
+    .logo{ 
+        width: 70px;
+        height: 70px;
+    }
+    .logoF{
+        width: 70px;
+        height: 70px;
+    }
+    footer {
+        color:  #00aeff ;
+        text-align: center;
+        padding: 3px;
+        background-color: #00c3ff2d ;
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    div .menu{
+        background-color: #00aeff75 ;
+    }
+    header{
+        padding-right: 0%;
+    }
+    nav ul {
+    
+    padding:0;
+    margin:0;
+    width: 100%;
+    list-style-type: none;
+    }
+    nav ul li {
+    list-style: none;
+    line-height:44px;
+    float:left;
+    background-color:#ffffff75;
+    text-decoration:none;
+    }
+    nav ul li a {
+    color: #00aeff ;
+    padding:10px;
+    font-size:20px;
+    text-decoration:none;
+    text-align: left;
+    }
+    li a:hover {
+    border-bottom:3px #ffffff solid;
+    transform: matrix(-1,0,0,1,0,0)
+    }
+    nav ul li ul { display:none;text-decoration:none;} /* Rend le menu déroulant caché par défaut */
+    nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+    display:list-item !important;
+    margin-top:10px;
+    margin-left:-80px;
+    text-align: center;
+    }
+    nav ul li:hover ul li {
+    float:none;
+    }
+    img{
+        width: 25px;
+        height: 25px;
+    }
+    div .rrrr{
+        width: 500px;
+        height: 20px;
+        margin-left: 35%;
+        margin-top: 150px;
+    }
+    button .search{
+        height: 220px;
+    }

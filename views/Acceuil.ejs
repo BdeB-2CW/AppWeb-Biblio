@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        Accueil       
+             
     </head>
+    <link rel="stylesheet" href="/CSS/style.css">
 <style>
+    
      .Titre{
         text-align: center;
         font-size: 30px;
@@ -49,18 +51,47 @@
         }
     }
 </style>
+
 <body>
-    <div class="Titre">
-    <h1>Bienvenue sur BiblioClick !</h1>
+    <header>
+        <div>
+            <nav>
+            <ul>
+                <li><img src="logo.png" class="logo"></li>
+            <li><a href="/views/Acceuil.ejs">Home</a> </li>
+            <li><a href="/views/recherche.ejs">Recherche</a></li>
+            <li><a href="/views/profil.ejs">Profile</a> </li>
+            <li><a href="/views/login.ejs">Login</a> </li>
+            <li><a href="/views/livres.ejs">Livre</a> </li>
+            <!-- Début du menu déroulant -->
+            <li class="logoP"><img src="profile.png" alt="Profil" class="logo">
+            <ul>
+            <li><a href="./Profil.html">Profile</a></li>
+            <li><a href="./Profil.html">Parametre</a></li>
+            <li><a href="./Login.html">Deconnexion</a></li>
+            </ul> 
+            </li></ul>
+            </nav>
+        </div>
+    </header>
+<br><br><br><br><br><br><br><br>
+<div class="Titre">
+<h1>Bienvenue sur BiblioClick !</h1>
 </div>
 
-<div class="slider">
+<div class="slider"> 
     <div class="slides">
         <div class="slide"><img src="../Images/livreImage1.jpg" alt="image1"></div>
         <div class="slide"><img src="../Images/livreImage2.jpg" alt="image2"></div>
         <div class="slide"><img src="../Images/livreImage3.jpg" alt="image3"></div>
 
     </div>
+
+    
 </div>  
 </body>
+<footer class="f">
+    <p>Author: Mebarkia Mohamed / Mohamed Wafi / Zhi Bo / Omar Khoudair</p>
+    <img src="logo.png" class="logo">
+</footer>
 </html>
