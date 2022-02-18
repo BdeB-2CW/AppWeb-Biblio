@@ -5,7 +5,8 @@
     text-decoration:none;
     }
     li.logoP{
-        padding-right:0%;
+        margin-left: 94%;
+        position: fixed;
         }
     .logo{ 
         width: 70px;
@@ -29,8 +30,8 @@
     div .menu{
         background-color: #00aeff75 ;
     }
-    header{
-        padding-right: 0%;
+    nav{
+        margin-right: 0%;
     }
     nav ul {
     
@@ -71,12 +72,96 @@
         width: 25px;
         height: 25px;
     }
-    div .rrrr{
-        width: 500px;
-        height: 20px;
-        margin-left: 35%;
-        margin-top: 150px;
+    .rrrr{
+        
+        padding-left: 20%;
+        padding-top: 140px;
+        position: absolute;
     }
-    button .search{
-        height: 220px;
+    div .barreRech{
+        width: 800px;
+        height: 18px;
+    }
+     form .tab{
+        padding-top: 100px;
+        padding-left: 9%;
+    }
+    .bouttonTab{
+        left: auto;
+    }
+
+    form.recherche input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+      }
+      
+      form.recherche button {
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+      }
+      
+      form.recherche button:hover {
+        background: #0b7dda;
+      }
+      
+      form.recherche::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+     .Titre{
+        position: absolute;
+        padding-top: 50px;
+        margin-left: 25%;
+        text-align: center;
+        font-size: 30px;        
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .slider{
+        width: 1110px;
+        position: fixed;
+        overflow: hidden;
+        margin: 150px auto;
+        
+
+    }
+    .slides{
+        width: 1110px ;
+        animation: glisse 15s infinite;
+    }
+    .slide {
+        float:left;
+    }
+
+    @keyframes glisse{
+        0%{
+            transform: translateX(0);
+        }
+        10%{
+            transform: translateX(0);
+        }
+        33%{
+            transform: translateX(-1110px);
+        }
+        43%{
+            transform: translateX(-1110px);
+        }
+        66%{
+            transform: translate(-2220px);
+        }
+        100%{
+            transform: translate(0);
+        }
     }
