@@ -1,0 +1,167 @@
+  li {
+    list-style:none !important;
+    padding:10px;
+    font-size:20px;
+    text-decoration:none;
+    }
+    li.logoP{
+        margin-left: 94%;
+        position: fixed;
+        }
+    .logo{ 
+        width: 70px;
+        height: 70px;
+    }
+    .logoF{
+        width: 70px;
+        height: 70px;
+    }
+    footer {
+        color:  #00aeff ;
+        text-align: center;
+        padding: 3px;
+        background-color: #00c3ff2d ;
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    div .menu{
+        background-color: #00aeff75 ;
+    }
+    nav{
+        margin-right: 0%;
+    }
+    nav ul {
+    
+    padding:0;
+    margin:0;
+    width: 100%;
+    list-style-type: none;
+    }
+    nav ul li {
+    list-style: none;
+    line-height:44px;
+    float:left;
+    background-color:#ffffff75;
+    text-decoration:none;
+    }
+    nav ul li a {
+    color: #00aeff ;
+    padding:10px;
+    font-size:20px;
+    text-decoration:none;
+    text-align: left;
+    }
+    li a:hover {
+    border-bottom:3px #ffffff solid;
+    transform: matrix(-1,0,0,1,0,0)
+    }
+    nav ul li ul { display:none;text-decoration:none;} /* Rend le menu déroulant caché par défaut */
+    nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+    display:list-item !important;
+    margin-top:10px;
+    margin-left:-80px;
+    text-align: center;
+    }
+    nav ul li:hover ul li {
+    float:none;
+    }
+    img{
+        width: 25px;
+        height: 25px;
+    }
+    .rrrr{
+        
+        padding-left: 20%;
+        padding-top: 140px;
+        position: absolute;
+    }
+    div .barreRech{
+        width: 800px;
+        height: 18px;
+    }
+     form .tab{
+        padding-top: 100px;
+        padding-left: 9%;
+    }
+    .bouttonTab{
+        left: auto;
+    }
+
+    form.recherche input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+      }
+      
+      form.recherche button {
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+      }
+      
+      form.recherche button:hover {
+        background: #0b7dda;
+      }
+      
+      form.recherche::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+     .Titre{
+        position: absolute;
+        padding-top: 50px;
+        margin-left: 25%;
+        text-align: center;
+        font-size: 30px;        
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .slider{
+        width: 1110px;
+        position: fixed;
+        overflow: hidden;
+        margin: 150px auto;
+        
+
+    }
+    .slides{
+        width: 1110px ;
+        animation: glisse 15s infinite;
+    }
+    .slide {
+        float:left;
+    }
+
+    @keyframes glisse{
+        0%{
+            transform: translateX(0);
+        }
+        10%{
+            transform: translateX(0);
+        }
+        33%{
+            transform: translateX(-1110px);
+        }
+        43%{
+            transform: translateX(-1110px);
+        }
+        66%{
+            transform: translate(-2220px);
+        }
+        100%{
+            transform: translate(0);
+        }
+    }

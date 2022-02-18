@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        recherche       
+        <%- include ('../views/partials/header.ejs') %>  
+        <link rel="stylesheet" href="/CSS/style.css">  
     </head>
 
     <body>
-        <h1>page recherche</h1>
-
+        
+        <form class="recherche" >
+            <table class="tab">
+                <td style="width:600px"><input type="text" placeholder="Search..." name="search2"> 
+                    <button type="submit" style="width:auto">Search</button></td>
+            </table>
+          </form>
     </body>
+    <footer class="f">
+        <p>Author: Mebarkia Mohamed / Mohamed Wafi / Zhi Bo / Omar Khoudair</p>
+        <img src="/Images/logo.png" class="logo">
+    </footer>
 </html>
