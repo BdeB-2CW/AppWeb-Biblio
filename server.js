@@ -6,6 +6,7 @@ const app = express();
 const port = 4000;
 
 const db = require("./application/models/db.js");
+const { is } = require("express/lib/request");
 
 
 
@@ -123,14 +124,13 @@ app.get('/recherche', (req, res) => {
 })
 
 //livre
-app.get('/livres/:livre', (req, res) => {
-    var titre = req.params.livre;
-    var sql =  "select * from livres where titre =" +"'" +titre+"'" +";";
+app.get('/livres/:isbn', (req, res) => {
+    var isbn = req.params.isbn;
+    var sql =  "select * from livres where isbn =" +"'" +isbn+"'" +";";
     db.query(sql, function (err, result) {
         if (err) {
             throw err;
         } else {
-            console.log(result);
             res.render('livres.ejs', { livre: result });
         }
     });
