@@ -1,22 +1,57 @@
-CREATE TABLE livres (
-    id               INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    auteur	     VARCHAR(50) NOT NULL,
-    titre            VARCHAR(50) NOT NULL,
-    dateparution     INT NOT NULL,
-    nombredecopies   INT NOT NULL,
-    isbn             VARCHAR(15) NOT NULL,
-    cout             INT NOT NULL,
-    description      VARCHAR(250) NOT NULL,
-    utilisateurs_id  INT
+DROP TABLE IF EXISTS Livres, Droits, Utilisateurs, Emprunts, Reservations;
+
+CREATE TABLE Livres (
+    Id               INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Auteur	         VARCHAR(50) NOT NULL,
+    Titre            VARCHAR(50) NOT NULL,
+    DateParution     INT NOT NULL,
+    NbCopies         INT NOT NULL,
+    NbDisponible     INT NOT NULL,
+    MaisonEdition    VARCHAR(50) NOT NULL,
+    ISBN             VARCHAR(15) NOT NULL,
+    Cout             FLOAT NOT NULL,
+    Description      TEXT NOT NULL,
+    Photo            TEXT
+);
+
+CREATE TABLE Droits(
+    Id              INT PRIMARY KEY NOT NULL,
+    Description     VARCHAR(25) NOT NULL
+);
+
+CREATE TABLE Utilisateurs (
+    Id         INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Nom        VARCHAR(25) NOT NULL,
+    Prenom     VARCHAR(25) NOT NULL,
+    Telephone  VARCHAR(20) NOT NULL,
+    Email      VARCHAR(50) NOT NULL,
+    Password   VARCHAR(25) NOT NULL,
+    Photo      VARCHAR(150),
+    MaxPret    INT,
+    NbPret     INT,
+    Droit_id   INT,
+    FOREIGN KEY (Droit_id) REFERENCES Droits(Id)
 );
 
 
-
-CREATE TABLE utilisateurs (
-    id         INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
-    nom        VARCHAR(25) NOT NULL,
-    prenom     VARCHAR(25) NOT NULL,
-    telephone  VARCHAR(20) NOT NULL,
-    email      VARCHAR(50) NOT NULL,
-    photo      VARCHAR(150)
+CREATE TABLE Emprunts(
+    Id                  INT PRIMARY KEY NOT NULL AUTO_INCREMENT,     
+    DatePret            DATE,
+    DateRetourPrevu     DATE,
+    DateRetour          DATE,
+    Livre_id            INT,
+    Utilisateur_id      INT,
+    FOREIGN KEY (Livre_id) REFERENCES Livres(Id),
+    FOREIGN KEY (Utilisateur_id) REFERENCES Utilisateurs(Id)
 );
+
+CREATE TABLE Reservations(
+    Id                  INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    DateReservation     DATE,
+    DateAnnulation      DATE,
+    Livre_id            INT,
+    Utilisateur_id      INT,
+    FOREIGN KEY (Livre_id) REFERENCES Livres(Id),
+    FOREIGN KEY (Utilisateur_id) REFERENCES Utilisateurs(Id)
+);
+

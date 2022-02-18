@@ -34,9 +34,11 @@
             <form action="/" method="post" class="form" id="formSignUp">
                 <h2 class="title">Nouveau utilisateur</h2>
                 <input type="hidden" name="option" value="signUp">
-                <input type="text" placeholder="Utilisateur" class="input" id="signUpUsername" name="username"/>
                 <input type="email" placeholder="Adresse courriel" class="input" id="signUpEmail"  name="email"/>
                 <input type="password" placeholder="Mots de passe" class="input" id="signUpPassword" name="password"/>
+                <input type="text" placeholder="Nom" class="input" id="signUpNom" name="Prenom"/>
+                <input type="text" placeholder="Prenom" class="input" id="signUpPrenom" name="Prenom"/>
+                <input type="tel" placeholder="Telephone" class="input" id="signUpTel" name="Telephone"/>
                 <button type="submit" class="btn" id="signUp">Nouveau utilisateur</button>
             </form>
         </div>
@@ -46,7 +48,7 @@
             <form action="/" method="post" class="form" id="formSignIn">
                 <h2 class="title">Connecter</h2>
                 <input type="hidden" name="option" value="signIn">
-                <input type="text" placeholder="Utilisateur" class="input" id="signInUsername" name="username"/>
+                <input type="text" placeholder="Email" class="input" id="signInEmail" name="Email"/>
                 <input type="password" placeholder="Mots de passe" class="input" id="signInPassword" name="password"/>
                 <a href="#" class="link">Mot de passe oublié?</a>
                 <button type="submit" class="btn" id="signIn">Connecter</button>
