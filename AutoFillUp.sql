@@ -1,3 +1,59 @@
+DROP TABLE IF EXISTS Livres, Droits, Utilisateurs, Emprunts, Reservations;
+
+CREATE TABLE Livres (
+    Id               INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Auteur	         VARCHAR(50) NOT NULL,
+    Titre            VARCHAR(50) NOT NULL,
+    DateParution     INT NOT NULL,
+    NbCopies         INT NOT NULL,
+    NbDisponible     INT NOT NULL,
+    MaisonEdition    VARCHAR(50) NOT NULL,
+    ISBN             VARCHAR(15) NOT NULL,
+    Cout             FLOAT NOT NULL,
+    Description      TEXT NOT NULL,
+    Photo            TEXT
+);
+
+CREATE TABLE Droits(
+    Id              INT PRIMARY KEY NOT NULL,
+    Description     VARCHAR(25) NOT NULL
+);
+
+CREATE TABLE Utilisateurs (
+    Id         INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
+    Nom        VARCHAR(25) NOT NULL,
+    Prenom     VARCHAR(25) NOT NULL,
+    Telephone  VARCHAR(20) NOT NULL,
+    Email      VARCHAR(50) NOT NULL,
+    Password   VARCHAR(25) NOT NULL,
+    Photo      VARCHAR(150),
+    MaxPret    INT,
+    NbPret     INT,
+    Droit_id   INT,
+    FOREIGN KEY (Droit_id) REFERENCES Droits(Id)
+);
+
+
+CREATE TABLE Emprunts(
+    Id                  INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,     
+    DatePret            DATE,
+    DateRetourPrevu     DATE,
+    DateRetour          DATE,
+    Livre_id            INT,
+    Utilisateur_id      INT,
+    FOREIGN KEY (Livre_id) REFERENCES Livres(Id),
+    FOREIGN KEY (Utilisateur_id) REFERENCES Utilisateurs(Id)
+);
+
+CREATE TABLE Reservations(
+    Id                  INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    DateReservation     DATE,
+    DateAnnulation      DATE,
+    Livre_id            INT,
+    Utilisateur_id      INT,
+    FOREIGN KEY (Livre_id) REFERENCES Livres(Id),
+    FOREIGN KEY (Utilisateur_id) REFERENCES Utilisateurs(Id)
+);
 ALTER TABLE Livres AUTO_INCREMENT=1;
 insert into Livres (ID, Titre, Auteur, DateParution, NbCopies, NbDisponible, MaisonEdition, ISBN, Cout, Description, Photo) VALUES (ID, 'La peste', 'Albert Camus', 2007, 5, 5, 'folio', 'ACLP002', 11.99, ' L\'intrigue du roman présente l\'histoire d\'une épidémie de peste qui sévit sur la ville d\'Oran dans les années 1940. Des rats viennent mourir au grand jour ; ils portent le bacille de la peste.', '\\Images\\Livres\\AlbertCamus\\laPeste.jpg') ; 
 insert into Livres (ID, Titre, Auteur, DateParution, NbCopies, NbDisponible, MaisonEdition, ISBN, Cout, Description, Photo) VALUES (ID, 'La chute', 'Albert Camus', 1998, 4, 4, 'folio', 'ACLC003', 8.99, ' Sur le pont, je passai derrière une forme penchée sur le parapet, et qui semblait regarder le fleuve. De plus près, je distinguai une mince jeune femme, habillée de noir.', '\\Images\\Livres\\AlbertCamus\\laChute.jpg');
