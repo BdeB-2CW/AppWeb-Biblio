@@ -7,6 +7,7 @@ const express = require('express');
 const app = express();
 const port = 4000;
 const { is } = require("express/lib/request");
+const { Console } = require("console");
 
 
 
@@ -29,11 +30,17 @@ app.get('/profils/:profil', (req, res) => {
     let requeteSQL='SELECT * FROM utilisateurs WHERE id=' + "'" + idProfil + "'"; 
     //ON FAIT LA REQUÊTE !!         
     db.query(requeteSQL,(err, result) => {
-        if(err) throw err;
+        //Au cas ou la réponse de la requête SQL est vide, cela signifie que l'élément saisi est inexistant, par conséquent, cet utilisateur n'existe pas
+        if(result.length<1){
+            //Si l'utilisateur est inexistant, on retourne à la page d'accueil
+            res.render('404')
+
+        }
         //La réponse est la page profil.ejs
         //On déclare 'profil' ci-bas, car on va le reprendre dans la page profil.ejs
         res.render('profil.ejs', {profil: result});
     });
+    
     
     
 
