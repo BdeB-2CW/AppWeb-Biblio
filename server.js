@@ -5,6 +5,8 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
+const db = require("./application/models/db.js");
+
 
 
 app.use( express.static( "public" ) );
@@ -122,7 +124,16 @@ app.get('/recherche', (req, res) => {
 
 //livre
 app.get('/livres/:livre', (req, res) => {
-    res.render('livres')
+    var titre = req.params.livre;
+    var sql =  "select * from livres where titre =" +"'" +titre+"'" +";";
+    db.query(sql, function (err, result) {
+        if (err) {
+            throw err;
+        } else {
+            console.log(result);
+            res.render('livres.ejs', { livre: result });
+        }
+    });
 });
 
 //profil
@@ -133,6 +144,7 @@ app.get('/profils/:profil', (req, res) => {
 
 require("./application/routes/livre.routes.js")(app);
 require("./application/routes/utilisateur.routes.js")(app);
+
 app.listen(port, function(err){
     if (err) console.log(err);
     console.log("Server listening on PORT", port);
