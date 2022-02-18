@@ -24,24 +24,23 @@
           <th>Contenu</th>
         </tr>
         <tr>
-          <td><img src="C:\Users\Eleve\Downloads\Blank-Book-Cover-PNG-Picture.png" width="400" 
-            height="500" /></td>
-          <td>Titre: </td>
+          <td><img src= "<%= livre[0].Photo %>"/></td>
+          <td>Titre: <%= livre[0].Titre %></td>
           <td></td>
         </tr>
         <tr>
           <td></td>
-          <td>Auteur: </td>
+          <td>Auteur: <%= livre[0].Auteur %></td>
           <td></td>
         </tr>
         <tr>
             <td></td>
-            <td>Annee: </td>
+            <td>Annee: <%= livre[0].DateParution %></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
-            <td>Description: </td>
+            <td>Description: <%= livre[0].Description %> </td>
             <td></td>
         </tr>
       </table>

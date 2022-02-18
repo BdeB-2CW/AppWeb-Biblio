@@ -1,9 +1,13 @@
+
+const db= require("./application/models/db.js")
 const fs=require("fs");
 const bodyParser = require('body-parser');
 const express = require('express');
 
 const app = express();
 const port = 4000;
+const { is } = require("express/lib/request");
+
 
 
 
@@ -17,7 +21,23 @@ app.use(bodyParser.urlencoded({
  }));
 app.use(bodyParser.json());
 
+//profil fait Mohamed Wafi
+app.get('/profils/:profil', (req, res) => {
+    //Tout d'abord il faut déclarer la variable idProfil extraite de l'URL saisi
+    var idProfil=req.params.profil;
+    //Déclaration de la requête SQL dans le format suivant (très important) pour chercher les infos du profil relié à l'ID saisi
+    let requeteSQL='SELECT * FROM utilisateurs WHERE id=' + "'" + idProfil + "'"; 
+    //ON FAIT LA REQUÊTE !!         
+    db.query(requeteSQL,(err, result) => {
+        if(err) throw err;
+        //La réponse est la page profil.ejs
+        //On déclare 'profil' ci-bas, car on va le reprendre dans la page profil.ejs
+        res.render('profil.ejs', {profil: result});
+    });
+    
+    
 
+});
 
 /**
  * Pages d'ouverture
@@ -121,18 +141,23 @@ app.get('/recherche', (req, res) => {
 })
 
 //livre
-app.get('/livres/:livre', (req, res) => {
-    res.render('livres')
+app.get('/livres/:isbn', (req, res) => {
+    var isbn = req.params.isbn;
+    var sql =  "select * from livres where isbn =" +"'" +isbn+"'" +";";
+    db.query(sql, function (err, result) {
+        if (err) {
+            throw err;
+        } else {
+            res.render('livres.ejs', { livre: result });
+        }
+    });
 });
 
-//profil
-app.get('/profils/:profil', (req, res) => {
-    res.render('profil')
 
-});
 
 require("./application/routes/livre.routes.js")(app);
 require("./application/routes/utilisateur.routes.js")(app);
+
 app.listen(port, function(err){
     if (err) console.log(err);
     console.log("Server listening on PORT", port);
