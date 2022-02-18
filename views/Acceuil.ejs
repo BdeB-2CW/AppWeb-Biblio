@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <div>
-            <nav>
-            <ul>
-                <li> <img src="/Images/logo.png"></li>
-            <li><a href="/views/Acceuil.ejs">Home</a> </li>
-            <li><a href="/views/recherche.ejs">Recherche</a></li>
-            <li><a href="/views/profil.ejs">Profile</a> </li>
-            <li><a href="/views/login.ejs">Login</a> </li>
-            <li><a href="/views/livres.ejs">Livre</a> </li>
-            <!-- Début du menu déroulant -->
-            <li class="logoP"><img src="/Images/profile.png" alt="Profil" class="logo">
-            <ul>
-            <li><a href="./Profil.html">Profile</a></li>
-            <li><a href="./Profil.html">Parametre</a></li>
-            <li><a href="./Login.html">Deconnexion</a></li>
-            </ul> 
-            </li></ul>
-            </nav>
-        </div>       
-    
+        <%- include ('../views/partials/header.ejs') %>
     <link rel="stylesheet" href="/CSS/style.css">
+    </head>
 <style>
     
      .Titre{
@@ -67,12 +49,8 @@
         }
     }
 </style>
-</head>
+
 <body>
-    <header>
-        
-    </header>
-<br><br><br><br><br><br><br><br>
 <div class="Titre">
 <h1>Bienvenue sur BiblioClick !</h1>
 </div>
