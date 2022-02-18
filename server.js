@@ -1,8 +1,10 @@
-// Ce document est écrit 99% par Zhi Bo Cao
+
 const fs=require("fs");
+const db= require("./application/models/db.js")
 const express = require('express');
 const app = express();
 const port = 4000;
+
 
 
 app.use( express.static( "public" ) );
@@ -12,7 +14,23 @@ app.use('./public/images', express.static(__dirname + 'images'))
 app.set('view engine', 'ejs');
 
 
+//profil fait Mohamed Wafi
+app.get('/profils/:profil', (req, res) => {
+    //Tout d'abord il faut déclarer la variable idProfil extraite de l'URL saisi
+    var idProfil=req.params.profil;
+    //Déclaration de la requête SQL dans le format suivant (très important) pour chercher les infos du profil relié à l'ID saisi
+    let requeteSQL='SELECT * FROM utilisateurs WHERE id=' + "'" + idProfil + "'"; 
+    //ON FAIT LA REQUÊTE !!         
+    db.query(requeteSQL,(err, result) => {
+        if(err) throw err;
+        //La réponse est la page profil.ejs
+        //On déclare 'profil' ci-bas, car on va le reprendre dans la page profil.ejs
+        res.render('profil.ejs', {profil: result});
+    });
+    
+    
 
+});
 
 /**
  * Pages d'ouverture
@@ -57,11 +75,7 @@ app.get('/livres/:livre', (req, res) => {
     res.render('livres')
 });
 
-//profil
-app.get('/profils/:profil', (req, res) => {
-    res.render('profil')
 
-});
 
 require("./application/routes/livre.routes.js")(app);
 require("./application/routes/utilisateur.routes.js")(app);
