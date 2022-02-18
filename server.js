@@ -1,11 +1,13 @@
 // Ce document est écrit 99% par Zhi Bo Cao
-
+const fs=require("fs");
 const express = require('express');
 const app = express();
 const port = 4000;
 
-app.use(express.static('public'))
+
+app.use( express.static( "public" ) );
 app.use('/CSS', express.static(__dirname + 'CSS'))
+app.use('./public/images', express.static(__dirname + 'images'))
 
 app.set('view engine', 'ejs');
 
@@ -61,7 +63,8 @@ app.get('/profils/:profil', (req, res) => {
 
 });
 
-
+require("./application/routes/livre.routes.js")(app);
+require("./application/routes/utilisateur.routes.js")(app);
 app.listen(port, function(err){
     if (err) console.log(err);
     console.log("Server listening on PORT", port);
