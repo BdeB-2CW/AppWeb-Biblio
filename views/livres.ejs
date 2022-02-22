@@ -9,39 +9,13 @@
     </title>
     <%- include ('../views/partials/header.ejs') %>
       <link rel="stylesheet" href="/CSS/style.css">
-      <style>
-        h1 { 
-          text-align: center;
-        }
-        h1.pagetitre { 
-          color: rgb(76,157,235)
-        }
-        div {
-          color: rgb(76,157,235)
-        }
-        td#desc {
-          white-space: normal;
-          width: 700px;
-        }
-        img.photolivre {
-          width: 250px;
-          height: 100%;
-        }
-        table.clivre {
-          width: 300px;
-          height: 100%;
-          text-align: left;
-          border-spacing: 15px;
-          margin-bottom: 20px;
-        }
-      </style>
   </head>
 
   <body>
     <br><br><br><br><br>
     <h1 class="pagetitre">Page de livre</h1>
     <br><br><br><br><br>
-    <div align="center">
+    <div class="livre" align="center">
       <table>
         <th>Livre</th>
         <th>Contenu</th>
@@ -71,7 +45,7 @@
             <table class="clivre">
               <tr>
                 <td>
-                  <%= livre[0].Titre %><br>
+                  <%= livre[0].Titre %>
                 </td>
               </tr>
               <tr>
