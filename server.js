@@ -153,7 +153,7 @@ app.get('/livres/:isbn', (req, res) => {
     var sql =  "select * from livres where isbn =" +"'" +isbn+"'" +";";
     db.query(sql, function (err, result) {
         if (err) {
-            throw err;
+            result.render("404.ejs");
         } else {
             res.render('livres.ejs', { livre: result });
         }
