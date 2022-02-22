@@ -143,10 +143,12 @@ app.post('/login', function(req, res){
     //console.log(dataReceived.option);
 
     //register
-    var readyToSignUp = false;
+    
+    
     const reg_email = /^[0-9a-zA-Z_.-]+[@][0-9a-zA-Z_.-]+([.][a-zA-Z]+){1,2}$/;
     const reg_tel = /^[0-9]{10}$/;
     if (dataReceived.option == "signUp"){
+        var readyToSignUp = false;
         //check valide
         if (reg_email.test(dataReceived.signUpEmail)){
             if (dataReceived.signUpPassword){
@@ -177,35 +179,59 @@ app.post('/login', function(req, res){
                     } else {
                         var sqlId = "select ID from Utilisateurs where Email =" +"'" +dataReceived.signUpEmail+"'" +";"
                         db.query(sqlId, function (err, result) {
-                            if (err) {                                
+                            if (err) {     
+                                console.log(err);                            
                             } else{
                                 res.redirect("/profils/" + result[0].ID)
                             }
                         })
                     }           
                 });
-            } catch(err){
-                
+            } catch(err){               
             }           
-            
-
+        }
+    }//end of register
+    //login
+    if(dataReceived.option == "signIn"){
+        console.log("login");
+        var readyToSignIn = false;
+        if (reg_email.test(dataReceived.signInEmail)){
+            if (dataReceived.signInPassword){
+                readyToSignIn = true;
+            }
         }
 
-    
-        
+        if(readyToSignIn){
+            console.log("ready to login")
+            //send information to db
+            var sql = "select ID, Email, Password from Utilisateurs where Email =" +"'" +dataReceived.signInEmail+"'" +";"
+            try {
+                db.query(sql, function (err, result) {
+                    if(err){
+                        console.log(err);                        
+                    }else{                    
+                        try{
+                            if(result[0].Password == dataReceived.signInPassword){
+                                res.redirect("/profils/" + result[0].ID);
+                            }else{
+                                res.status(423).end('wrong password');
+                            }
+                        }catch{
+                            res.status(422).end('user not exist');
+                        }
+                    }
+                });
+            }catch(err){
+                console.log(err)
+            }
+        }
 
 
 
 
 
-    }//end of register
 
-
-
-    //login
-
-
-    
+    } //end of login
 })
 
 //acceuil
