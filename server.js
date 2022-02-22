@@ -3,6 +3,11 @@ const db= require("./application/models/db.js")
 const fs=require("fs");
 const bodyParser = require('body-parser');
 const express = require('express');
+//try to use alert
+//const Swal = require('sweetalert2');
+const alert = require('alert');
+//const popup = require('popups');
+
 
 const app = express();
 const port = 4000;
@@ -134,6 +139,68 @@ app.post('/login', async (req, res) => {
 
 //restart post
 app.post('/login', function(req, res){
+    const dataReceived = req.body;
+    //console.log(dataReceived.option);
+
+    //register
+    var readyToSignUp = false;
+    const reg_email = /^[0-9a-zA-Z_.-]+[@][0-9a-zA-Z_.-]+([.][a-zA-Z]+){1,2}$/;
+    const reg_tel = /^[0-9]{10}$/;
+    if (dataReceived.option == "signUp"){
+        //check valide
+        console.log(dataReceived.signUpEmail)
+        if (reg_email.test(dataReceived.signUpEmail)){
+            if (dataReceived.signUpPassword){
+                if (dataReceived.signUpNom){
+                    if (dataReceived.signUpPrenom){
+                        if(reg_tel.test(dataReceived.signUpTel)){
+                            readyToSignUp = true;
+                        }
+                    }
+                }
+            }
+        }
+        if(readyToSignUp){
+            //send information to db
+            var sql =   "insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Password, MaxPret, NbPret, Droit_id, Photo) VALUES " + 
+                        " (ID, '" + 
+                        dataReceived.signUpNom + "', '" + 
+                        dataReceived.signUpPrenom + "', '" + 
+                        dataReceived.signUpTel + "', '" + 
+                        dataReceived.signUpEmail + "', '" + 
+                        dataReceived.signUpPassword + "', 5, 0, 0, " + 
+                        "\'\\Images\\Profil\\1.png')"
+            db.query(sql, function (err, result) {
+                if (err) {
+                    throw err;
+                } else {
+                    var sqlId = "select ID from Utilisateurs where Email =" +"'" +dataReceived.signUpEmail+"'" +";"
+                    db.query(sqlId, function (err, result) {
+                        if (err) {
+                            throw err;
+                        } else{
+                            res.redirect("/profils/" + result[0].ID)
+                        }
+                    })
+                }           
+            });
+
+        }
+
+    
+        
+
+
+
+
+
+    }//end of register
+
+
+
+    //login
+
+
     
 })
 
