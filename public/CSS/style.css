@@ -72,6 +72,12 @@
         width: 25px;
         height: 25px;
     }
+    
+
+    .photoProfil{
+        width: 120px;
+        height: 120px;
+    }
     .rrrr{
         
         padding-left: 20%;
@@ -120,31 +126,37 @@
         display: table;
       }
       
-     .Titre{
+      .Titre{
         position: absolute;
-        padding-top: 50px;
+        padding-top: -10px;
         margin-left: 25%;
         text-align: center;
         font-size: 30px;        
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
-    .slider{
-        width: 1110px;
-        position: fixed;
-        overflow: hidden;
-        margin: 150px auto;
-        
 
+    img.accImg{
+        width: 600px;
+        height: 400px;
+       
     }
     .slides{
-        width: 1110px ;
+        width: 1800px ;
         animation: glisse 15s infinite;
     }
     .slide {
         float:left;
-    }
 
+       
+    }
+    .slider{
+        width: 600px;
+        overflow: hidden;
+        margin: 10px, 20px, 10px, 50px;
+        
+        
+    }
     @keyframes glisse{
         0%{
             transform: translateX(0);
@@ -153,15 +165,17 @@
             transform: translateX(0);
         }
         33%{
-            transform: translateX(-1110px);
+            transform: translateX(-600px);
         }
         43%{
-            transform: translateX(-1110px);
+            transform: translateX(-600px);
         }
         66%{
-            transform: translate(-2220px);
+            transform: translate(-1200px);
         }
         100%{
             transform: translate(0);
         }
+        
     }
+   

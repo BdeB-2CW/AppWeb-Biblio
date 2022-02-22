@@ -30,17 +30,23 @@ app.use(bodyParser.json());
 //profil fait Mohamed Wafi
 app.get('/profils/:profil', (req, res) => {
     //Tout d'abord il faut déclarer la variable idProfil extraite de l'URL saisi
+
     var idProfil=req.params.profil;
+    
     //Déclaration de la requête SQL dans le format suivant (très important) pour chercher les infos du profil relié à l'ID saisi
     let requeteSQL='SELECT * FROM utilisateurs WHERE id=' + "'" + idProfil + "'"; 
     //ON FAIT LA REQUÊTE !!         
     db.query(requeteSQL,(err, result) => {
         //Au cas ou la réponse de la requête SQL est vide, cela signifie que l'élément saisi est inexistant, par conséquent, cet utilisateur n'existe pas
+        try{
         if(result.length<1){
             //Si l'utilisateur est inexistant, on retourne à la page d'accueil
             res.render('404')
 
         }
+    }catch(err){
+        console.log("Erreur");
+    } 
         //La réponse est la page profil.ejs
         //On déclare 'profil' ci-bas, car on va le reprendre dans la page profil.ejs
         res.render('profil.ejs', {profil: result});
