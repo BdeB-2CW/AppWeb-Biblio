@@ -1,11 +1,11 @@
-
-const db= require("./application/models/db.js")
-const fs=require("fs");
+const db = require("./application/models/db.js")
 const bodyParser = require('body-parser');
 const express = require('express');
+
+//const fs=require("fs");
 //try to use alert
 //const Swal = require('sweetalert2');
-const alert = require('alert');
+//const alert = require('alert');
 //const popup = require('popups');
 
 
@@ -13,8 +13,6 @@ const app = express();
 const port = 4000;
 const { is } = require("express/lib/request");
 const { Console } = require("console");
-
-
 
 
 app.use( express.static( "public" ) );
@@ -27,124 +25,16 @@ app.use(bodyParser.urlencoded({
  }));
 app.use(bodyParser.json());
 
-//profil fait Mohamed Wafi
-app.get('/profils/:profil', (req, res) => {
-    //Tout d'abord il faut déclarer la variable idProfil extraite de l'URL saisi
-    var idProfil=req.params.profil;
-    //Déclaration de la requête SQL dans le format suivant (très important) pour chercher les infos du profil relié à l'ID saisi
-    let requeteSQL='SELECT * FROM utilisateurs WHERE id=' + "'" + idProfil + "'"; 
-    //ON FAIT LA REQUÊTE !!         
-    db.query(requeteSQL,(err, result) => {
-        //Au cas ou la réponse de la requête SQL est vide, cela signifie que l'élément saisi est inexistant, par conséquent, cet utilisateur n'existe pas
-        if(result.length<1){
-            //Si l'utilisateur est inexistant, on retourne à la page d'accueil
-            res.render('404')
 
-        }
-        //La réponse est la page profil.ejs
-        //On déclare 'profil' ci-bas, car on va le reprendre dans la page profil.ejs
-        res.render('profil.ejs', {profil: result});
-    });
-    
-    
-    
-
-});
-
-/**
- * Pages d'ouverture
- */
-
+//Page register and login
 app.get('/login', async (req, res) => {
-    //show all users
-    //const users = await User.find()
-    //console.log(users)
     res.render('login');
 });
-/*
-//register and login
-app.post('/login', async (req, res) => {
-    const dataReceived = req.body
-    res.status(201).send('babalba')
-    //register
-    
-    if (dataReceived.option == "signUp"){
-        //check valide
-        if (!dataReceived.username){
-            return res.status(422).end('username is required')
-        }
 
-        if (!dataReceived.password){
-            return res.status(422).end('password is required')
-        }
-
-        if (!dataReceived.email){
-            return res.status(422).end('email is required')
-        }
-        //res.send('post checked')
-        
-        //put new user data to mongodb
-        try{
-            const user = await User.create({
-            username: dataReceived.username,
-            password: dataReceived.password,
-            email: dataReceived.email  
-        })
-        console.log('Utilisateur cree')    
-        res.redirect("/Liste")
-
-        }catch(err){
-            console.log(err)
-            return res.status(422).end('user exist')
-        }         
-    }//End of register  
-
-    //login
-    if (dataReceived.option == "signIn"){
-        //check data received valide
-        const dataReceived = req.body       
-        if (!dataReceived.username){
-            return res.status(422).end('username is required')
-        }
-
-        if (!dataReceived.password){
-            return res.status(422).end('password is required')
-        }
-        //console.log("login post checked")
-
-        //find user with same name
-        const userLogin = await User.findOne({
-            username: dataReceived.username
-        })
-        if (!userLogin) { 
-            return res.status(422).send({ message: 'user not exist'})
-        }
-        //compaire password
-        const isPasswordValid = require('bcrypt').compareSync(
-            dataReceived.password,
-            userLogin.password
-        )
-        if (!isPasswordValid) {
-            return res.status(422).send({ message: 'wrong password' })
-        }
-
-
-    res.redirect("/")
-        //end of login
-    }
-
- 
-});//end of post
-*/
-
-//restart post
 app.post('/login', function(req, res){
     const dataReceived = req.body;
-    //console.log(dataReceived.option);
 
-    //register
-    
-    
+    //register   
     const reg_email = /^[0-9a-zA-Z_.-]+[@][0-9a-zA-Z_.-]+([.][a-zA-Z]+){1,2}$/;
     const reg_tel = /^[0-9]{10}$/;
     if (dataReceived.option == "signUp"){
@@ -193,7 +83,6 @@ app.post('/login', function(req, res){
     }//end of register
     //login
     if(dataReceived.option == "signIn"){
-        console.log("login");
         var readyToSignIn = false;
         if (reg_email.test(dataReceived.signInEmail)){
             if (dataReceived.signInPassword){
@@ -202,7 +91,6 @@ app.post('/login', function(req, res){
         }
 
         if(readyToSignIn){
-            console.log("ready to login")
             //send information to db
             var sql = "select ID, Email, Password from Utilisateurs where Email =" +"'" +dataReceived.signInEmail+"'" +";"
             try {
@@ -226,20 +114,35 @@ app.post('/login', function(req, res){
             }
         }
 
-
-
-
-
-
     } //end of login
 })
 
-//acceuil
+//Page profil fait Mohamed Wafi
+app.get('/profils/:profil', (req, res) => {
+    //Tout d'abord il faut déclarer la variable idProfil extraite de l'URL saisi
+    var idProfil=req.params.profil;
+    //Déclaration de la requête SQL dans le format suivant (très important) pour chercher les infos du profil relié à l'ID saisi
+    let requeteSQL='SELECT * FROM utilisateurs WHERE id=' + "'" + idProfil + "'"; 
+    //ON FAIT LA REQUÊTE !!         
+    db.query(requeteSQL,(err, result) => {
+        //Au cas ou la réponse de la requête SQL est vide, cela signifie que l'élément saisi est inexistant, par conséquent, cet utilisateur n'existe pas
+        if(result.length<1){
+            //Si l'utilisateur est inexistant, on retourne à la page d'accueil
+            res.render('404')
+        }
+        //La réponse est la page profil.ejs
+        //On déclare 'profil' ci-bas, car on va le reprendre dans la page profil.ejs
+        res.render('profil.ejs', {profil: result});
+    });   
+
+});
+
+//page Acceuil
 app.get('/',(req,res) => {
     res.render('Acceuil');
 });
 
-//recherche liste de donnee
+//Page recherche, on liste les tous les livres dans la base de donnee en ce moment
 app.get('/recherche', (req, res) => {  
     res.render('recherche')  
 })
@@ -256,7 +159,6 @@ app.get('/livres/:isbn', (req, res) => {
         }
     });
 });
-
 
 
 require("./application/routes/livre.routes.js")(app);
