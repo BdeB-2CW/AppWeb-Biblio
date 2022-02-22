@@ -148,7 +148,6 @@ app.post('/login', function(req, res){
     const reg_tel = /^[0-9]{10}$/;
     if (dataReceived.option == "signUp"){
         //check valide
-        console.log(dataReceived.signUpEmail)
         if (reg_email.test(dataReceived.signUpEmail)){
             if (dataReceived.signUpPassword){
                 if (dataReceived.signUpNom){
@@ -162,28 +161,33 @@ app.post('/login', function(req, res){
         }
         if(readyToSignUp){
             //send information to db
-            var sql =   "insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Password, MaxPret, NbPret, Droit_id, Photo) VALUES " + 
+            var sql =   "insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Password, MaxPret, NbPret, Droit_id, Photo) VALUES" + 
                         " (ID, '" + 
                         dataReceived.signUpNom + "', '" + 
                         dataReceived.signUpPrenom + "', '" + 
                         dataReceived.signUpTel + "', '" + 
                         dataReceived.signUpEmail + "', '" + 
                         dataReceived.signUpPassword + "', 5, 0, 0, " + 
-                        "\'\\Images\\Profil\\1.png')"
-            db.query(sql, function (err, result) {
-                if (err) {
-                    throw err;
-                } else {
-                    var sqlId = "select ID from Utilisateurs where Email =" +"'" +dataReceived.signUpEmail+"'" +";"
-                    db.query(sqlId, function (err, result) {
-                        if (err) {
-                            throw err;
-                        } else{
-                            res.redirect("/profils/" + result[0].ID)
-                        }
-                    })
-                }           
-            });
+                        "'\/Images\/Profil\/1.png');"
+            try{
+                db.query(sql, function (err, result) {
+                    if (err) {     
+                        console.log(err);                  
+                        res.status(422).end('Information exist deja dans le base de donnee');                       
+                    } else {
+                        var sqlId = "select ID from Utilisateurs where Email =" +"'" +dataReceived.signUpEmail+"'" +";"
+                        db.query(sqlId, function (err, result) {
+                            if (err) {                                
+                            } else{
+                                res.redirect("/profils/" + result[0].ID)
+                            }
+                        })
+                    }           
+                });
+            } catch(err){
+                
+            }           
+            
 
         }
 
