@@ -257,11 +257,6 @@ app.get('/livres/:isbn', (req, res) => {
     });
 });
 
-
-
-require("./application/routes/livre.routes.js")(app);
-require("./application/routes/utilisateur.routes.js")(app);
-
 app.listen(port, function(err){
     if (err) console.log(err);
     console.log("Server listening on PORT", port);
