@@ -13,6 +13,50 @@
                     <button type="submit" style="width:auto">Search</button></td>
             </table>
           </form>
+
+          <div>
+                <table class="TabDesLivres">
+                            <% for(var i=0; i<livresTab.length; i++) {%>
+                                 <% if (i % 5 == 0){%>
+                                    <td> <% } %> 
+                                        <div id = "Unlivre">
+                                            <table class="Unlivre" >                                                 
+                                                <tr><img src= "<%= livresTab[i].Photo %>"> </tr>
+                                                <td><a herf ="/livres/PCAL001"></a>Titre: <%= livresTab[i].Titre %></a></td>
+                                            </table>
+                                        </div>
+                                        
+
+                                      <% if (i % 5 == 4){%>
+                                     </td> <% } %> 
+                                    
+                         <% } %>
+                </table>
+                
+
+                  <!-- for(var i=0; i<livresTab.length; i++) {
+                     for(var j=0; j<5; j++) {
+                        //list
+                     }
+
+                    } -->
+              
+          </div>
+
+          <script>
+
+              function sendISBN(){
+                  console.log("bb")
+              }
+                
+
+           
+
+
+
+          </script>
+
+
     </body>
     <footer class="f">
         <p>Author: Mebarkia Mohamed / Mohamed Wafi / Zhi Bo / Omar Khoudair</p>

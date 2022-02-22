@@ -137,7 +137,18 @@ app.get('/',(req,res) => {
 
 //recherche liste de donnee
 app.get('/recherche', (req, res) => {  
-    res.render('recherche')  
+    try{
+        let query = "SELECT ISBN, Titre, Photo FROM LIVRES"
+        db.query(query, function (err, result) {
+            console.log(result.length);
+            res.render('recherche', {livresTab: result})
+        });
+        
+    }catch(err){
+        console.log(err);
+    }
+        
+      
 })
 
 //livre
