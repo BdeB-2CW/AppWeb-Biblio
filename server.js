@@ -82,6 +82,7 @@ app.post('/login', function(req, res){
             }
         }
         if(readyToSignUp){
+            const rand = Math.floor(Math.random() * 12) + 1;
             //send information to db
             var sql =   "insert into Utilisateurs (ID, Nom, Prenom ,Telephone, Email, Password, MaxPret, NbPret, Droit_id, Photo) VALUES" + 
                         " (ID, '" + 
@@ -90,7 +91,8 @@ app.post('/login', function(req, res){
                         dataReceived.signUpTel + "', '" + 
                         dataReceived.signUpEmail + "', '" + 
                         dataReceived.signUpPassword + "', 5, 0, 0, " + 
-                        "'\/Images\/Profil\/1.png');"
+                        "'\/Images\/Profil\/"+ rand +".png');"
+
             try{
                 db.query(sql, function (err, result) {
                     if (err) {     
@@ -177,7 +179,6 @@ app.get('/recherche', (req, res) => {
     try{
         let query = "SELECT ISBN, Titre, Photo FROM LIVRES"
         db.query(query, function (err, result) {
-            console.log(result.length);
             res.render('recherche', {livresTab: result})
         });
         
