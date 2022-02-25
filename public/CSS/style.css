@@ -152,10 +152,13 @@
     .slider{
         width: 600px;
         overflow: hidden;
-        margin: 10px, 20px, 10px, 50px;
-        
-        
+        padding-bottom: 50px;
+        position: relative;
+        left: 210px;
+        top: -100px;
+
     }
+
     @keyframes glisse{
         0%{
             transform: translateX(0);

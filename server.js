@@ -50,9 +50,6 @@ app.get('/profils/:profil', (req, res) => {
         res.render('profil.ejs', {profil: result});
     });
     
-    
-    
-
 });
 
 /**
