@@ -206,8 +206,12 @@
     .imgRecherche
     {
     align-content: center;
-     width: 100px;
-     height: 150px;   
+     width: 200px;
+     height: 220px;   
+    }
+    .Unlivre
+    {
+        align-items: center;
     }
    /*  .titreLivreRecherche
     {
@@ -216,7 +220,7 @@
     .TabDesLivres
     {
         align-items: center;
-        padding-left: 25%;
+        padding-left: 18%;
     }
     .caseTabeLivre
     {
