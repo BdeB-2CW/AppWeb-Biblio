@@ -26,31 +26,18 @@
                                     <td> <% } %> 
                                         <div id = "Unlivre">
                                             <table class="Unlivre" >                                                 
-                                                <tr>
+                                                <tr class="caseTabeLivre">
                                                     <a href='/livres/<%=livresTab[i].ISBN %>'>
-
-                                                        <image src= "<%=livresTab[i].Photo %>" >
+                                                        <image class="imgRecherche" src= "<%=livresTab[i].Photo %>" aligne="middle">
                                                     </a>    
-                                                        
-
                                                 </tr>
-                                                <td><a href='/livres/<%=livresTab[i].ISBN %>'>Titre: <%= livresTab[i].Titre %></a></td>
+                                                <td><a  class="titreLivreRecherche" href='/livres/<%=livresTab[i].ISBN %>'><%= livresTab[i].Titre %></a></td>
                                             </table>
                                         </div>
                                       <% if (i % 5 == 4){%>
-                                     </td> <% } %> 
-                                    
-                         <% } %>
+                                    </td> <% } %> 
+                            <% } %>
                 </table>
-                
-
-                  <!-- for(var i=0; i<livresTab.length; i++) {
-                     for(var j=0; j<5; j++) {
-                        //list
-                     }
-
-                    } -->
-              
           </div>
 
           <script>

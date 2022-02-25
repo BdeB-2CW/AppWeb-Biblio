@@ -180,9 +180,6 @@
         }
         
     }
-   
-    
-
     h1.pagetitre { 
         color: rgb(76,157,235);
         text-align: center;
@@ -204,4 +201,24 @@
         text-align: left;
         border-spacing: 15px;
         margin-bottom: 20px;
+    }
+
+    .imgRecherche
+    {
+    align-content: center;
+     width: 100px;
+     height: 150px;   
+    }
+   /*  .titreLivreRecherche
+    {
+        
+    } */
+    .TabDesLivres
+    {
+        align-items: center;
+        padding-left: 25%;
+    }
+    .caseTabeLivre
+    {
+        padding: 100px;
     }
