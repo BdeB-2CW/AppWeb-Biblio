@@ -6,7 +6,12 @@
     </head>
 
     <body>
-        
+       <!--  <a href=”/livres/PCAL001”>
+
+            <image src= "<%=livresTab[4].Photo %>" >
+            
+            </a>
+         -->
         <form class="recherche" >
             <table class="tab">
                 <td style="width:600px"><input type="text" placeholder="Search..." name="search2"> 
@@ -21,12 +26,17 @@
                                     <td> <% } %> 
                                         <div id = "Unlivre">
                                             <table class="Unlivre" >                                                 
-                                                <tr><img src= "<%= livresTab[i].Photo %>"> </tr>
-                                                <td><a herf ="/livres/PCAL001"></a>Titre: <%= livresTab[i].Titre %></a></td>
+                                                <tr>
+                                                    <a href='/livres/<%=livresTab[i].ISBN %>'>
+
+                                                        <image src= "<%=livresTab[i].Photo %>" >
+                                                    </a>    
+                                                        
+
+                                                </tr>
+                                                <td><a href='/livres/<%=livresTab[i].ISBN %>'>Titre: <%= livresTab[i].Titre %></a></td>
                                             </table>
                                         </div>
-                                        
-
                                       <% if (i % 5 == 4){%>
                                      </td> <% } %> 
                                     
