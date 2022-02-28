@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="/CSS/style.css">  
     </head>
 
-    <body>
+    <body class="recherche">
        <!--  <a href=”/livres/PCAL001”>
 
             <image src= "<%=livresTab[4].Photo %>" >
@@ -17,21 +17,21 @@
                 <td style="width:600px"><input type="text" placeholder="Search..." name="search2"> 
                     <button type="submit" style="width:auto">Search</button></td>
             </table>
-          </form>
-
+        </form>
+        <br>
           <div>
                 <table class="TabDesLivres">
                             <% for(var i=0; i<livresTab.length; i++) {%>
                                  <% if (i % 5 == 0){%>
-                                    <td> <% } %> 
+                                    <td class="recherche"> <% } %> 
                                         <div id = "Unlivre">
                                             <table class="Unlivre" >                                                 
-                                                <tr class="caseTabeLivre">
+                                                <tr class="recherche" class="caseTabeLivre">
                                                     <a href='/livres/<%=livresTab[i].ISBN %>'>
                                                         <image class="imgRecherche" src= "<%=livresTab[i].Photo %>" aligne="middle">
                                                     </a>    
                                                 </tr>
-                                                <td><a  class="titreLivreRecherche" href='/livres/<%=livresTab[i].ISBN %>'><%= livresTab[i].Titre %></a></td>
+                                                <td class="recherche"><a  class="titreLivreRecherche" href='/livres/<%=livresTab[i].ISBN %>'><%= livresTab[i].Titre %></a><br></td>
                                             </table>
                                         </div>
                                       <% if (i % 5 == 4){%>

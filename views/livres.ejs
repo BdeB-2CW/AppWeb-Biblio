@@ -13,63 +13,40 @@
 
   <body>
     <br><br><br><br><br>
-    <h1 class="pagetitre">Page de livre</h1>
-    <br><br><br><br><br>
+    <h1 class="pagetitre"><%= livre[0].Titre %></h1>
+    <br><br>
     <div class="livre" align="center">
       <table>
-        <th>Livre</th>
-        <th>Contenu</th>
-        <th>Détails</th>
         <tr>
           <td><img class="photolivre" width="100%" src="<%= livre[0].Photo %>"></td>
           <td>
             <table class="clivre">
+              <th width = "300px">Contenu</th>
+              <th width = "800px">Détails</th>
               <tr>
                 <td> Titre: </td>
+                <td><%= livre[0].Titre %></td>
               </tr>
               <tr>
                 <td> Auteur: </td>
+                <td><%= livre[0].Auteur %></td>
               </tr>
               <tr>
                 <td> Annee: </td>
+                <td><%= livre[0].DateParution %></td>
               </tr>
               <tr>
                 <td> Description: </td>
+                <td><%= livre[0].Description %></td>
               </tr>
               <tr>
                 <td>Nombre de copie disponible: </td>
+                <td><%= livre[0].NbDisponible %></td>
               </tr>
             </table>
           </td>
-          <td>
-            <table class="clivre">
-              <tr>
-                <td>
-                  <%= livre[0].Titre %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= livre[0].Auteur %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= livre[0].DateParution %>
-                </td>
-              </tr>
-              <tr>
-                <td id="desc">
-                  <%= livre[0].Description %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= livre[0].NbDisponible %>
-                </td>
-              </tr>
-            </table>
-          </td>
+
+
         </tr>
         <tr>
           <td><Button>Reserver le livre</Button></td>
