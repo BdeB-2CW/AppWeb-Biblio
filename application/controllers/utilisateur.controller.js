@@ -1,1 +1,0 @@
-const Utilisateur = require("../models/utilisateur.model.js");
