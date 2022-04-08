@@ -22,7 +22,6 @@
         padding: 3px;
         background-color: #00c3ff2d ;
         display: block;
-        position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -72,6 +71,12 @@
         width: 25px;
         height: 25px;
     }
+    
+
+    .photoProfil{
+        width: 120px;
+        height: 120px;
+    }
     .rrrr{
         
         padding-left: 20%;
@@ -82,9 +87,9 @@
         width: 800px;
         height: 18px;
     }
-     form .tab{
-        padding-top: 100px;
-        padding-left: 9%;
+    table.tab{
+        padding-top: 100px; 
+        margin:auto;
     }
     .bouttonTab{
         left: auto;
@@ -120,30 +125,36 @@
         display: table;
       }
       
-     .Titre{
-        position: absolute;
+      .Titre{
+        margin: auto;
         padding-top: 50px;
-        margin-left: 25%;
         text-align: center;
         font-size: 30px;        
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
-    .slider{
-        width: 1110px;
-        position: fixed;
-        overflow: hidden;
-        margin: 150px auto;
-        
 
+    img.accImg{
+        width: 1200px;
+        height: 650px;
+       
     }
     .slides{
-        width: 1110px ;
+        width: 3600px ;
         animation: glisse 15s infinite;
     }
     .slide {
         float:left;
+
+       
     }
+    .slider{
+        width: 1200px;
+        overflow: hidden;
+        margin:auto;
+    }
+
+    
 
     @keyframes glisse{
         0%{
@@ -153,15 +164,78 @@
             transform: translateX(0);
         }
         33%{
-            transform: translateX(-1110px);
+            transform: translateX(-1200px);
         }
         43%{
-            transform: translateX(-1110px);
+            transform: translateX(-1200px);
         }
         66%{
-            transform: translate(-2220px);
+            transform: translate(-2400px);
         }
         100%{
             transform: translate(0);
         }
+        
+    }
+    h1.pagetitre { 
+        color: rgb(76,157,235);
+        text-align: center;
+    }
+    div.livre {
+        color: rgb(76,157,235);
+        margin:auto;
+    }
+    td#desc {
+        white-space: normal;
+        width: 700px;
+    }
+    img.photolivre {
+        width: 250px;
+        height: 100%;
+    }
+    table.clivre {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        border-spacing: 15px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        max-width: 1000px;
+        
+    }
+
+    .imgRecherche
+    {
+    align-content: center;
+     width: 259px;
+     height: 250px;   
+    }
+    .Unlivre
+    {
+        align-items: center;
+        margin:auto;
+    }
+   /*  .titreLivreRecherche
+    {
+        
+    } */
+    .TabDesLivres
+    {
+        align-items: center;
+        width: 600px;
+        margin:auto;
+    }
+    .caseTabeLivre
+    {
+        padding: 100px;
+    }
+
+    body.recherche{
+        text-align:center;
+    }
+    th.recherche, td.recherche{
+        padding: 30px;
+    }
+    body.acceuil{
+        text-align:center; 
     }
